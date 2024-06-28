@@ -1,0 +1,8 @@
+fastapi==0.110.*
+uvicorn==0.29.*
+orjson==3.10.*
+pytz==2024.*
+user-agent-parser==0.1.*
+pydantic-settings==2.2.*
+apscheduler==3.10.*
+httptools
