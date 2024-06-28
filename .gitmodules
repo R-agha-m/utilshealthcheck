@@ -1,0 +1,9 @@
+[submodule "utilscommon"]
+	path = utilscommon
+	url = ../utilscommon.git
+[submodule "utilsfastapi"]
+	path = utilsfastapi
+	url = ../utilsfastapi.git
+[submodule "utilslogging"]
+	path = utilslogging
+	url = ../utilslogging.git

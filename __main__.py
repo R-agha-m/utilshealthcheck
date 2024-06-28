@@ -21,7 +21,7 @@ if __name__ == "__main__":
     run(
         app=SETTINGS.UVICORN_SERVER.APP,
         host=SETTINGS.UVICORN_SERVER.HOST,
-        port=COMMAND_CONFIG_DATA.get('port') or SETTINGS.UVICORN_SERVER.PORT,
+        port=int(COMMAND_CONFIG_DATA.get('port')) or SETTINGS.UVICORN_SERVER.PORT,
         log_level=SETTINGS.UVICORN_SERVER.LOG_LEVEL.lower(),
         # proxy_headers=SETTINGS.UVICORN_SERVER.PROXY_HEADER,
         forwarded_allow_ips=SETTINGS.UVICORN_SERVER.FORWARDED_ALLOW_IPS,

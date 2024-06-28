@@ -16,4 +16,3 @@ prepare_gzip_middleware(
 
 prepare_process_time_header(app=app)
 
-from ...history import middleware  # noqa

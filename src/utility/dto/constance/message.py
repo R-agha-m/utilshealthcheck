@@ -1,0 +1,16 @@
+from ...message import messages
+
+MESSAGE_DUPLICATE_ITEM_ERROR = messages.duplicate_item()
+MESSAGE_ITEM_NOT_FOUND = messages.item_not_found()
+MESSAGE_SUCCESS = messages.success_message()
+MESSAGE_UNACCEPTABLE_FILE_FORMAT = messages.unacceptable_file_format()
+MESSAGE_UNAUTHORIZED_USER = messages.unauthorized_user()
+MESSAGE_FAILURE = messages.failure_message()
+MESSAGE_INVALID_PASSWORD = messages.invalid_password()
+MESSAGE_NO_PASSWORD = messages.no_password()
+MESSAGE_UNREGISTERED_USER = messages.unregistered_user()
+MESSAGE_ALREADY_REGISTERED = messages.already_registered_user()
+MESSAGE_SERVER_ERROR = messages.server_error()
+MESSAGE_NOT_ALLOWED = messages.not_allowed()
+MESSAGE_INACTIVE_USER = messages.inactive_user()
+MESSAGE_SERVICE_UNAVAILABLE = messages.service_unavailable()

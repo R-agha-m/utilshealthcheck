@@ -12,13 +12,8 @@ from utilscommon.utilscommon import (
     is_test_mode,
     generate_build_versioning,
 )
-from utilspreparelogger.utilspreparelogger.prepare_logger import PrepareLogger
+from utilslogging.utilslogging.prepare_logger import PrepareLogger
 
-from src.utility.setting.schema import (
-    Regex,
-    Dataset,
-    User,
-)
 
 # =========================================================================================================== DIRECTORY
 BASE_DIR_PATH = base_dir_path_finder(
@@ -34,7 +29,7 @@ add_dir_to_env(path_=BASE_DIR_STR)
 # ============================================================================================================ SETTINGS
 class _Settings(BaseSettings):
     model_config = SettingsConfigDict(
-        env_file=BASE_DIR_STR + sep + "environment_variables",
+        env_file=BASE_DIR_STR + sep + ".env",
         env_file_encoding='utf-8',
         env_nested_delimiter='__',
         env_ignore_empty=True,
@@ -43,19 +38,7 @@ class _Settings(BaseSettings):
     GENERAL: schema.SchemaGeneral
     UVICORN_SERVER: schema.SchemaUvicornServer
     LOGGING: schema.SchemaLogging
-    MONGODB: schema.SchemaDatabaseWithAuthDb
-    MONGODB_TEST: schema.SchemaDatabaseWithAuthDb
-    PAGINATION: schema.SchemaPagination
-    REGEX: Regex
-    OTP: schema.SchemaOtp
-    TOKEN: schema.SchemaToken
     GZIP_MIDDLEWARE: schema.SchemaGZipMiddleware
-    CACHE: schema.SchemaCache
-    PASSWORD: schema.SchemaPassword
-    MINIO: schema.SchemaBoto3
-    DATASET: Dataset
-    KAVEH_NEGAR: schema.SchemaKavehNegar
-    USER: User
 
 
 SETTINGS = _Settings()

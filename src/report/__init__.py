@@ -3,9 +3,7 @@ from utilscommon.utilscommon.string_case_convertor import (
     EnumCaseStrategy,
 )
 
-NAME = "city"
-PERSIAN_NAME = 'شهر'
-
+NAME = "report"
 
 CAMEL_CASE_NAME = string_case_convertor(
     text=NAME,
