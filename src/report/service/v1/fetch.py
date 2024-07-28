@@ -1,3 +1,5 @@
+from time import time
+from datetime import datetime
 from traceback import format_exc
 
 from fastapi import Request
@@ -16,6 +18,8 @@ async def fetch(request: Request) -> dict:
             'error': None,
             'data': {
                 **COMMAND_CONFIG_DATA,
+                'datetime': datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S'),
+                'epoch': time(),
                 'headers': {key: value for key, value in request.headers.items()},
                 "method": request.method,
                 "path_params": request.path_params,
