@@ -1,4 +1,4 @@
-from utilsfastapi.utilsfastapi.response.message import PreparedMessage as _PrepareMessage
+from utilsweb.fastapi.response.message import PreparedMessage as _PrepareMessage
 
 
 class PreparedMessage(_PrepareMessage):

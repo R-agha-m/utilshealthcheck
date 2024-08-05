@@ -8,7 +8,7 @@ ENV PYTHONPATH /app
 
 COPY . .
 
-RUN apt-get update && \
-    pip install --no-cache-dir -r requirements_for_linux.txt
+RUN apt-get update
+RUN pip install -r requirements-linux.txt  # --no-cache-dir
 
-CMD ["python", "."]
+CMD ["python", "__main__.py"]

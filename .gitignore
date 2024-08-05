@@ -123,3 +123,5 @@ sam_*/
 .gitmodules.old
 doc/figma/
 miscellaneous/
+utilscommon.egg-info/
+.env

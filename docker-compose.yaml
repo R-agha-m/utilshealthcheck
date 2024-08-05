@@ -1,48 +1,19 @@
+#  docker compose --env-file .env.x up
+
 services:
-  dms:
-    image: dms_api
-    environment:
-      MONGODB__HOST: db
-      MONGODB_TEST__HOST: db
-      MINIO__HOST: minio
-      MINIO__SERVER_ADDRESS_FOR_CLIENT: http://dms.min0.apidar.com
+  project:
+    env_file:
+      - "${ENV_FILE}"
     build:
       context: .
       dockerfile: Dockerfile
+    environment:
+      ENV_FILE: "${ENV_FILE}"
     volumes:
-      - ./logs:/app/logs
+      - ./io:/app/io
     ports:
-      - "6060:6060"
+      - "${UVICORN_SERVER__PORT}:${UVICORN_SERVER__PORT}"
     depends_on:
       - db
-      - minio
+    restart: on-failure
 
-  db:
-    image: mongo:7.0.8-jammy
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: pass
-      MONGO_INITDB_DATABASE: admin
-    ports:
-      - "27017:27017"
-    volumes:
-      - db-data:/data/db
-#      - ./docker_volumes/mongodb:/data/db
-
-  minio:
-    image: bitnami/minio:2024.5.1
-    environment:
-      MINIO_ROOT_USER: root
-      MINIO_ROOT_PASSWORD: miniopass
-      MINIO_API_PORT_NUMBER: 9010
-      MINIO_CONSOLE_PORT_NUMBER: 9011
-    ports:
-      - '9010:9010'
-      - '9011:9011'
-    volumes:
-      - minio-data:/bitnami/minio/data
-#      - ./docker_volumes/minio:/bitnami/minio/data
-
-volumes:
-  db-data: ~
-  minio-data: ~

@@ -1,11 +1,14 @@
-from fastapi import Request
-from utilsfastapi.utilsfastapi.response.custom_orjson_response import ProjectJSONResponse as JsonResponse
+from os import sep
 
-from ... import NAME
+from fastapi import Request
+from utilsweb.fastapi.response.custom_orjson_response import ProjectJSONResponse as JsonResponse
+
+from ... import LOWER_SNAKE_CASE_NAME
 from ...service.v1 import fetch as service
 from .router import router
 
-ROUTE_NAME = 'get_' + NAME
+FILE_NAME = __file__.rstrip(".py").rsplit(sep, 1)[-1]
+ROUTE_NAME = f"{LOWER_SNAKE_CASE_NAME}:{FILE_NAME}"
 
 
 @router.get(

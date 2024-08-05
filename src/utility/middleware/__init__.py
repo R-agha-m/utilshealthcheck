@@ -1,4 +1,4 @@
-from utilsfastapi.utilsfastapi.middleware import (
+from utilsweb.fastapi.middleware import (
     prepare_cors_middleware,
     prepare_gzip_middleware,
     prepare_process_time_header,

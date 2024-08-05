@@ -1,4 +1,4 @@
-from utilscommon.utilscommon.exception import ProjectBaseException
+from utilscommon.exception import ProjectBaseException
 
 from .status_code import *
 from .message import *

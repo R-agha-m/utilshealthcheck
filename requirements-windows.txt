@@ -1,0 +1,12 @@
+git+https://git@github.com/hacknitive/utilscommon@v0.0.15
+git+https://git@github.com/hacknitive/utilslogging@v0.0.6
+git+https://git@github.com/hacknitive/utilsweb@v0.1.3
+
+fastapi>=0.110
+uvicorn>=0.29
+orjson>=3.10
+pytz>=2024
+user-agent-parser>=0.1
+pydantic-settings>=2.2
+apscheduler>=3.10
+httptools

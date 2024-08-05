@@ -1,0 +1,5 @@
+-e git+ssh://git@github.com/hacknitive/utilscommon#egg=utilscommon
+-e git+ssh://git@github.com/hacknitive/utilsdatabase#egg=utilsdatabase
+-e git+ssh://git@github.com/hacknitive/utilslogging#egg=utilslogging
+-e git+ssh://git@github.com/hacknitive/utilsweb#egg=utilsweb
+-e git+ssh://git@github.com/hacknitive/utilsuseragent#egg=utilsuseragent

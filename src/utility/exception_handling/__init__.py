@@ -1,4 +1,4 @@
-from utilsfastapi.utilsfastapi.exception_handling import (
+from utilsweb.fastapi.exception_handling import (
     prepare_handler_for_project_base_exception_function,
     prepare_handler_for_http_exception_function,
     prepare_handler_for_5xx_creator_function,

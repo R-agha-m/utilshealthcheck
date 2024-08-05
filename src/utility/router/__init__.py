@@ -1,5 +1,5 @@
-from utilsfastapi.utilsfastapi.router.redirector import router as redirect_router
-from utilsfastapi.utilsfastapi.router.cv import router as cv_router
+from utilsweb.fastapi.router.redirector import router as redirect_router
+from utilsweb.fastapi.router.cv import router as cv_router
 
 from ...fast_api_pre_setup import app
 
