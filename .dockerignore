@@ -127,7 +127,7 @@ sam_*.py
 sam_*/
 sdist/
 share/python-wheels/
-src/logs/*
+utilshealthcheck/logs/*
 target/
 var/
 venv

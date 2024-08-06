@@ -14,7 +14,7 @@ for index, arg_i in enumerate(args[::2]):
 
 from uvicorn import run
 
-from src.setting import SETTINGS
+from utilshealthcheck.setting import SETTINGS
 
 
 if __name__ == "__main__":

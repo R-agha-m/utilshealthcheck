@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from src.setting import (
+from utilshealthcheck.setting import (
     SETTINGS,
     VERSION,
 )
