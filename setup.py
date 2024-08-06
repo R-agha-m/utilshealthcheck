@@ -15,8 +15,8 @@ with open("VERSION", "r", encoding="utf-8") as handler:
 # ================================================================================================= install_requires
 def parse_requirements(filename):
     with open(filename) as f:
-        return f.read().splitlines()
-
+        requirements = f.read().splitlines()
+        return [i for i in requirements if i and not i.startswith("#")]
 
 if exists('requirements.txt'):
     install_requires = parse_requirements('requirements.txt')
@@ -29,14 +29,14 @@ else:
     elif platform.startswith('linux'):
         install_requires = parse_requirements('requirements-linux.txt')
 
-print(install_requires)
-
 # ==============================================================================
 setup(
     name="utilshealthcheck",
     version=VERSION,
     packages=find_packages(),
-    install_requires=install_requires,
+    install_requires=[
+        'git+https://git@github.com/hacknitive/utilscommon@v0.0.15#egg=utilscommon'
+    ],
     author="Reza 'Sam' Aghamohammadi (Hacknitive)",
     author_email="hacknitive@gmail.com",
     description="Create and get real useragent strings",
