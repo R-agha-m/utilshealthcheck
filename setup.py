@@ -29,6 +29,8 @@ else:
     elif platform.startswith('linux'):
         install_requires = parse_requirements('requirements-linux.txt')
 
+print(install_requires)
+
 # ==============================================================================
 setup(
     name="utilshealthcheck",
