@@ -5,6 +5,6 @@ from ... import (
 )
 
 router = APIRouter(
-    prefix="",
+    prefix="/report",
     tags=[PASCAL_CASE_WITH_SPACE_NAME],
 )
