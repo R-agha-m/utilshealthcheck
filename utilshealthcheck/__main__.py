@@ -18,10 +18,12 @@ from utilshealthcheck.setting import SETTINGS
 
 
 if __name__ == "__main__":
+    port = COMMAND_CONFIG_DATA.get('port') or SETTINGS.UVICORN_SERVER.PORT
+
     run(
         app=SETTINGS.UVICORN_SERVER.APP,
         host=SETTINGS.UVICORN_SERVER.HOST,
-        port=int(COMMAND_CONFIG_DATA.get('port')) or SETTINGS.UVICORN_SERVER.PORT,
+        port=int(port),
         log_level=SETTINGS.UVICORN_SERVER.LOG_LEVEL.lower(),
         # proxy_headers=SETTINGS.UVICORN_SERVER.PROXY_HEADER,
         forwarded_allow_ips=SETTINGS.UVICORN_SERVER.FORWARDED_ALLOW_IPS,
